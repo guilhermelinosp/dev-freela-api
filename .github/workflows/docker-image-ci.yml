@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        service: [Authentication]
+        service: [DevFreela]
 
     steps:
       - name: Check out the repo
@@ -44,8 +44,8 @@ jobs:
         uses: docker/build-push-action@v5.1.0
         with:
           context: .
-          file: ./Source/${{ matrix.service }}.SupportHub.API/Dockerfile
+          file: ./Source/${{ matrix.service }}.API/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.actor }}/${{ steps.set_service_lowercase.outputs.service_lowercase }}.supporthub.api:latest
-            docker.io/${{ github.actor }}/${{ steps.set_service_lowercase.outputs.service_lowercase }}.supporthub.api:latest
+            ghcr.io/${{ github.actor }}/${{ steps.set_service_lowercase.outputs.service_lowercase }}.api:latest
+            docker.io/${{ github.actor }}/${{ steps.set_service_lowercase.outputs.service_lowercase }}.api:latest

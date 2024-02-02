@@ -1,4 +1,5 @@
 name: .NET Build CI
+
 on:
   push:
     branches: ["main"]
@@ -19,6 +20,8 @@ jobs:
 
     - name: 'Setup .NET'
       uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ["6.0.x", "7.0.x", "8.0.x"]
 
     - name: Cache Dependencies
       uses: actions/cache@v4

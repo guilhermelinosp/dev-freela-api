@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "DevFreela.API": {
+    "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

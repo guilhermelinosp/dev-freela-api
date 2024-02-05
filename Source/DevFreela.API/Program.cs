@@ -1,7 +1,10 @@
+using DevFreela.Application;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 var configuration = builder.Configuration;
+services.AddApplicationInjaction(configuration);
 
 
 services.AddControllers();

@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MediatR" Version="12.2.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
     </ItemGroup>
 
@@ -20,6 +21,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DevFreela.Application\DevFreela.Application.csproj" />
+      <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
     </ItemGroup>
 
 </Project>
